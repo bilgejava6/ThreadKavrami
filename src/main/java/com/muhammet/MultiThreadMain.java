@@ -1,6 +1,6 @@
 package com.muhammet;
 
-public class Main {
+public class MultiThreadMain {
     public static void main(String[] args) {
         /**
          * Main Thread
@@ -30,11 +30,15 @@ public class Main {
             }
             System.out.println("toplam3.....: "+ toplam1);
         }).start();
-        long toplam2=0;
-        for(long i=0;i<30_000_000_000L;i++){
-            toplam2++;
-        }
-        System.out.println("toplam4.....: "+ toplam2);
+
+            long toplam2=0;
+            for(long i=0;i<20_000_000_000L;i++){
+                toplam2++;
+            }
+            System.out.println("toplam4.....: "+ toplam2);
+
+
+
         long end = System.currentTimeMillis();
         System.out.println("Toplam süre....: "+ (end-start));
 
